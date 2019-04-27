@@ -27,7 +27,7 @@ def CalculateEquation():
     firstArg = int(sys.argv[1])
     secondArg = int(sys.argv[2])
     equation = sys.argv[3]
-    result = eval("{}{}{}".format(firstArg, "+", secondArg))
+    result = eval("{}{}{}".format(firstArg, equation, secondArg))
     print(result)
 
 
