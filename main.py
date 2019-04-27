@@ -1,10 +1,19 @@
 import sys
 
-if __name__ == '__main__':
-    print ("This is the name of the script: ", sys.argv[0])
-    print ("Number of arguments: ", len(sys.argv))
-    print ("The arguments are: " , str(sys.argv))
+def ValidateArgsCount():
+    if len(sys.argv) != 4:
+        raise Exception("Unexpected args count!")
+
+def CalculateEquation():
     firstArg = sys.argv[1]
     secondArg = sys.argv[2]
     equation = sys.argv[3]
     print(firstArg + secondArg)
+
+
+if __name__ == '__main__':
+    try:
+        ValidateArgsCount()
+        CalculateEquation()
+    except Exception as e:
+        print(e)
